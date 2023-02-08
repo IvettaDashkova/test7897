@@ -23,15 +23,15 @@ export const App = () => {
     >
       <AppBar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="" element={<Home />} />
         <Route path="/goit-react-hw-05-movies/" element={<Home />} />
-        <Route path="movies" element={<Movies />}></Route>
+        <Route path="/movies" element={<Movies />}></Route>
         <Route
-          path="movies/:movieId"
+          path="/movies/:movieId"
           element={<MovieDetails selectedMovie={getSelectedMovie} />}
         >
-          <Route path="cast" element={<Cast selectedMovie={selectedMovie} />} />
-          <Route path="reviews" element={<Reviews />} />
+          <Route path="/cast" element={<Cast selectedMovie={selectedMovie} />} />
+          <Route path="/reviews" element={<Reviews />} />
         </Route>
 
         <Route path="*" element={<NotFound />} />
